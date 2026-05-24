@@ -7,7 +7,7 @@ def main():
         "data/legitarsasagok.csv"
     )
 
-    celallomasok = AdatKezelo.celallomasok_beolvasasa(
+    repterek = AdatKezelo.repterek_beolvasasa(
         "data/repterek.csv"
     )
     
@@ -17,8 +17,8 @@ def main():
 
     print("\n--- Légitársaságok ---")
 
-    for legitarsasag in legitarsasagok:
-        print(legitarsasag)
+    for legitarsasagok in legitarsasagok:
+        print(legitarsasagok)
 
     print("\n--- Repterek ---")
 

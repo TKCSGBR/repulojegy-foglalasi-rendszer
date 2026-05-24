@@ -1,8 +1,8 @@
 import csv
 
-from models.legitarsasagok import Legitarsasag
-from models.repterek import repterek
-from models.jaratok import jaratok
+from models.legitarsasag import Legitarsasag
+from models.repter import Repter
+from models.jarat import Jarat
 
 
 class AdatKezelo:
@@ -34,40 +34,42 @@ class AdatKezelo:
         repterek = []
 
         with open(fajlnev, mode="r", encoding="utf-8") as fajl:
-             
-             olvaso = csv.DictReader(fajl)
+
+            olvaso = csv.DictReader(fajl)
 
             for sor in olvaso:
 
-                repterek = repterek(
-                    sor["repter_azonosíto"],
+                repter = Repter(
+                    sor["repter_azonosito"],
                     sor["orszag"],
                     sor["varos"],
                     sor["repter_nev"]
                 )
 
-                repterek.append(repterek)
+                repterek.append(repter)
+
         return repterek
     
     @staticmethod
-    def celallomasok_beolvasasa(fajlnev):
+    def jaratok_beolvasasa(fajlnev):
 
-        celallomasok = []
+        jaratok = []
 
         with open(fajlnev, mode="r", encoding="utf-8") as fajl:
-             
-             olvaso = csv.DictReader(fajl)
+
+            olvaso = csv.DictReader(fajl)
 
             for sor in olvaso:
 
-                jaratok = jaratok(
+                jarat = Jarat(
                     sor["jaratszam"],
-                    sor["legitarsasag"],
                     sor["indulasi_ido"],
+                    sor["legitarsasag_rovidites"],
                     sor["indulasi_hely"],
                     sor["celallomas"],
                     sor["jegyar"]
                 )
 
-                jaratok.append(jaratok)
-        return celallomasok
+                jaratok.append(jarat)
+
+        return jaratok

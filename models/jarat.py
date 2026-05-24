@@ -6,16 +6,18 @@ class Jarat(ABC):
     def __init__(
         self,
         jaratszam,
-        legitarsasag,
-        indulasi_repter,
-        cel_repter,
+        indulasi_ido,
+        legitarsasag_rovidites,
+        indulasi_hely,
+        celallomas,
         jegyar
     ):
 
         self.__jaratszam = jaratszam
-        self.__legitarsasag = legitarsasag
-        self.__indulasi_repter = indulasi_repter
-        self.__cel_repter = cel_repter
+        self.__indulasi_ido = indulasi_ido
+        self.__legitarsasag_rovidites = legitarsasag_rovidites
+        self.__indulasi_hely = indulasi_hely
+        self.__celallomas = celallomas
         self.__jegyar = jegyar
 
     @property
@@ -23,16 +25,20 @@ class Jarat(ABC):
         return self.__jaratszam
 
     @property
-    def legitarsasag(self):
-        return self.__legitarsasag
+    def indulasi_ido(self):
+        return self.__indulasi_ido
+    
+    @property
+    def legitarsasag_rovidites(self):
+        return self.__legitarsasag_rovidites
 
     @property
-    def indulasi_repter(self):
-        return self.__indulasi_repter
+    def indulasi_hely(self):
+        return self.__indulasi_hely
 
     @property
-    def cel_repter(self):
-        return self.__cel_repter
+    def celallomas(self):
+        return self.__celallomas
 
     @property
     def jegyar(self):
@@ -50,8 +56,9 @@ class Jarat(ABC):
 
         return (
             f"\nJáratszám: {self.__jaratszam}\n"
-            f"Légitársaság: {self.__legitarsasag.nev}\n"
-            f"Indulás: {self.__indulasi_repter.repter_nev}\n"
-            f"Célállomás: {self.__cel_repter.repter_nev}\n"
+            f"Indulási idő: {self.__indulasi_ido}\n"
+            f"Légitársaság: {self.__legitarsasag_rovidites}\n"
+            f"Indulás: {self.__indulasi_hely}\n"
+            f"Célállomás: {self.__celallomas}\n"
             f"Jegyár: {self.__jegyar} Ft\n"
         )
