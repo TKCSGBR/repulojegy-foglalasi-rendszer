@@ -1,0 +1,32 @@
+[
+  {
+    "foglalas_id": 1,
+    "utas_nev": "Takács Gábor",
+    "jaratszam": "ER110"
+  },
+  {
+    "foglalas_id": 2,
+    "utas_nev": "Both Ágota",
+    "jaratszam": "ER110"
+  },
+  {
+    "foglalas_id": 3,
+    "utas_nev": "Takács Kende Gábor",
+    "jaratszam": "ER110"
+  },
+  {
+    "foglalas_id": 4,
+    "utas_nev": "Takács Gábor",
+    "jaratszam": "LH120"
+  },
+  {
+    "foglalas_id": 5,
+    "utas_nev": "Both Ágota",
+    "jaratszam": "LH120"
+  },
+  {
+    "foglalas_id": 6,
+    "utas_nev": "Takács Kende Gábor",
+    "jaratszam": "LH120"
+  }
+]

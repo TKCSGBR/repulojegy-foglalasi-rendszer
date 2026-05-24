@@ -17,7 +17,8 @@ def main():
     )
 
     foglalasi_rendszer = FoglalasiRendszer()
-
+    foglalasi_rendszer.foglalasok_betoltese(jaratok)  
+    
     print("\n--- Légitársaságok ---")
 
     for legitarsasag in legitarsasagok:
