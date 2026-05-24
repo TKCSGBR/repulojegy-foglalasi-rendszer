@@ -1,31 +1,32 @@
-from datetime import datetime
-
-
 class JegyFoglalas:
 
-    def __init__(self, utas_nev, jarat, datum):
+    def __init__(
+        self,
+        foglalas_id,
+        utas_nev,
+        jarat
+    ):
+
+        self.__foglalas_id = foglalas_id
         self.__utas_nev = utas_nev
         self.__jarat = jarat
-        self.__datum = datum
-        self.__foglalasi_id = id(self)
 
     @property
-    def foglalasi_id(self):
-        return self.__foglalasi_id
+    def foglalas_id(self):
+        return self.__foglalas_id
 
     @property
-    def datum(self):
-        return self.__datum
+    def utas_nev(self):
+        return self.__utas_nev
 
     @property
     def jarat(self):
         return self.__jarat
 
     def __str__(self):
+
         return (
-            f"Foglalás ID: {self.__foglalasi_id} | "
-            f"Név: {self.__utas_nev} | "
-            f"Járat: {self.__jarat.jaratszam} | "
-            f"Cél: {self.__jarat.celallomas} | "
-            f"Dátum: {self.__datum}"
+            f"Foglalás ID: {self.__foglalas_id} | "
+            f"Utas: {self.__utas_nev} | "
+            f"Járat: {self.__jarat.jaratszam}"
         )
